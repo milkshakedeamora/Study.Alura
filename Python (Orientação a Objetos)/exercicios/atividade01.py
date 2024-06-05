@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../modelos')))
-from restaurantes import Restaurante
 '''
 Atribua o valor 'Italiana' ao atributo categoria da instância restaurante_praca da classe Restaurante.
 Acesse o valor do atributo nome da instância restaurante_praca da classe Restaurante.
@@ -13,13 +9,16 @@ Verifique se a categoria da instância restaurante_pizza é 'Fast Food'.
 Mude o estado da instância restaurante_pizza para ativo.
 Imprima no console o nome e a categoria da instância restaurante_praca.
 '''
-
+class Restaurante:
+    nome = ''
+    categoria = ''
+    ativo = False
     
 restaurante_praca  = Restaurante()
 restaurante_praca.categoria = 'Italiana'
 print(f'Nome {restaurante_praca.nome}')
 print(f'Ativo :{restaurante_praca.ativo}')
-print(f'Categoria :{Restaurante.categoria}')
+categoria = Restaurante.categoria
 restaurante_praca.nome = 'Bistro'
 restaurante_pizza = Restaurante()
 
